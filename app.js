@@ -84,4 +84,10 @@ app.use(function (req, res) {
   res.render("404");
 });
 
+// Deals with 500 errors (server side)
+
+app.use(function (error, req, res, next) {
+  res.render("500");
+});
+
 app.listen(port);
